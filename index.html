@@ -10,27 +10,65 @@
 </head>
 <body>
 
-<h1> <p>Weather API</p>
-	by alligator2d</h1>
+<h1><p>Weather API</p>
+	by alligator2d
+</h1>
 
 <div class="container">
-	<input type="text" id="myInput" placeholder="enter city name ..." class="input">
 	
-	<button><img src="img/Shape.svg" alt="search"></button>
-	<div class="pricing-table row">
-		<div class="package featured">
-			<p class="package-name">Kiev</p>
-			
-			<p class="price">10&deg;</p>
-			<p class="disclaimer">Clouds</p>
-			
-			<ul class="features">
-				<li>Feature 1</li>
-			</ul>
-<!--			<button class="button-primary">Go</button>-->
+	<div class="input">
+		<input type="text" id="myInput" placeholder="enter city name ..." class="input">
+		<button><img src="img/Shape.svg" alt="search"></button>
+	</div>
+	
+	<div class="weather">
+		
+		<div class="main-Now">
+			<div class="pricing-table row">
+				<div class="package featured">
+					<p class="price">10&deg;</p>
+					
+					<!--			<p class="disclaimer">Clouds</p>-->
+					<ul class="features">
+						<li>Feature</li>
+					</ul>
+					<p class="package-name">Kazan</p>
+				</div>
+			</div>
+		
+		</div>
+		
+		<div class="main-Details">
+			<div class="package featured">
+				<p class="package-name-details">Kazan</p>
+				<p class="price-details">10&deg;</p>
+				<p class="price-feels">12&deg;</p>
+				
+				
+				<p class="disclaimer">Clouds</p>
+				<p class="disclaimer-sunrise">08:20</p>
+				<p class="disclaimer-sunset">18:40</p>
+				
+				
+				<ul class="features">
+<!--					<li>Feature</li>-->
+				</ul>
+			</div>
+		
+		</div>
+		
+		
+		<div class="section">
+			<div class="now active">Now</div>
+			<div class="details">Details</div>
 		</div>
 	</div>
-	<div class="out"></div>
+	
+	<div class="add">
+		<div class="locations">Add Locations:</div>
+	</div>
+
+
 </div>
 <script src="js/view/view.js"></script>
 <script src="js/script.js"></script>
