@@ -2,31 +2,28 @@ html {
 	box-sizing: border-box;
 }
 
-/*.container {*/
-/*	width: 621px;*/
-/*	height: 462px;*/
-/*	display: block;*/
-/*	margin: 0 auto;*/
-/*	border: 1px solid;*/
-/*	margin-top: 20px;*/
-/*}*/
 p {
 	font-weight: bold;
 	font-size: 20px;
 }
+
 .price {
 	font-size: 40px;
 	color: #32a1ce;
 }
+
 .features {
 	padding-top: 60px;
 	text-align: center;
+	position: relative;
 }
+
 .package-name {
 	padding-left: 5px;
 	padding-top: 111px;
 	font-size: 30px;
 }
+
 h1 {
 	margin-top: 30px;
 	text-align: center;
@@ -38,9 +35,6 @@ input {
 	height: 40px;
 	width: 584px;
 	padding-left: 10px;
-	/*border: 1px solid;*/
-	/*border: thick double #32a1ce;*/
-	
 }
 
 button {
@@ -59,11 +53,9 @@ button img {
 .container {
 	display: block;
 	margin: 0 auto;
-	/*border: 1px solid;*/
 	border: thick double #32a1ce;
 	width: 600px;
 	height: 435px;
-	
 	display: grid;
 	grid-template-columns: 300px 300px;
 	grid-template-rows: 45px 390px;
@@ -104,6 +96,7 @@ button img {
 	grid-area: now; 
 	cursor: pointer;
 }
+
 .active {
 	/*background: #252525;*/
 	color: #fff;
@@ -138,13 +131,31 @@ button img {
 	border: 0.5px solid;
 	grid-area: locations;
 }
+
 .section button {
 	border: none;
 	outline: none;
 	background-color: transparent;
 }
+
 .main-Details {
 	text-align: center;
 	margin-top: 40px;
 	line-height: 30px;
+}
+
+.like {
+	position: absolute;
+	cursor: pointer;
+	top:450px;
+	right: 520px;
+}
+
+.list {
+	margin-top: 5px;
+	text-align: center;
+}
+
+.delete {
+	float: right;
 }
