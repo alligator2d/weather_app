@@ -6,7 +6,6 @@ window.addEventListener('DOMContentLoaded',function () {
 	const btn = document.querySelector("button");
 	document.querySelector('.main-Details').style.display = 'none';
 	getFromLocalStorage(list);
-	
 	input.onkeydown = checkEnter;
 	
 	btn.addEventListener("click", async () => {
