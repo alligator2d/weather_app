@@ -45,13 +45,15 @@ button {
 
 button img {
 	position: absolute;
-	top:100px;
-	right: 225px;
+	top: 7px;
+	right: 0;
+	/*top:100px;*/
+	/*right: 225px;*/
 	width: 27px;
 }
 
 .container {
-	display: block;
+	position: relative;
 	margin: 0 auto;
 	border: thick double #32a1ce;
 	width: 600px;
@@ -98,7 +100,6 @@ button img {
 }
 
 .active {
-	/*background: #252525;*/
 	color: #fff;
 	background: #32a1ce;
 	
@@ -139,6 +140,7 @@ button img {
 }
 
 .main-Details {
+	top:0;
 	text-align: center;
 	margin-top: 40px;
 	line-height: 30px;
@@ -147,8 +149,10 @@ button img {
 .like {
 	position: absolute;
 	cursor: pointer;
-	top:450px;
-	right: 520px;
+	right: 3px;
+	bottom: 2px;
+	/*top:400px;*/
+	/*right: 520px;*/
 }
 
 .list {

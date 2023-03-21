@@ -18,10 +18,6 @@ function getTime(res) {
 	return `${hours}:${minutes}`;
 }
 
-// let t1 = new Date(1673527617);
-// let t2 = new Date(1673563824)
-// console.log(`${t1.getHours()}:${t1.getMinutes()}`);
-// console.log(`${t2.getHours()}:${t2.getMinutes()}`);
 
 function createElem(city17) {
 	const elem = document.createElement("div");
@@ -52,7 +48,6 @@ function createWeather(data) {
 	document.querySelector(".disclaimer-sunrise").textContent = `Sunrise: ${getTime(data.sys.sunrise)}`;
 	document.querySelector(".disclaimer-sunset").textContent = `Sunset: ${getTime(data.sys.sunset)}`;
 	
-	// input.value = "";
 }
 
 async function checkEnter(e) {
@@ -90,12 +85,5 @@ if(deleteBtn) {
 }
 
 function deleteElem() {
-	// const btn = e.target.closest(".delete");
-	// if(!btn) {
-	// 	return;
-	// }
-	// btn.parentElement.remove();
-	
-	console.log('delete');
 	localStorage.clear();
 }

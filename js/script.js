@@ -1,19 +1,18 @@
+require('dotenv').config()
 
 window.addEventListener('DOMContentLoaded',function () {
 	let list = [];
-	
 	const input = document.querySelector("input");
 	const btn = document.querySelector("button");
 	document.querySelector('.main-Details').style.display = 'none';
-	
 	getFromLocalStorage(list);
 	
 	input.onkeydown = checkEnter;
 	
 	btn.addEventListener("click", async () => {
 		const cityName = input.value;
-		const serverUrl = "http://api.openweathermap.org/data/2.5/";
-		const apiKey = "dd104ede60c26d64cf20852b80b4317d";
+		const apiKey = process.env.API_KEY;
+		const serverUrl = "https://api.openweathermap.org/data/2.5/";
 		const url = `${serverUrl}weather?q=${cityName}&appid=${apiKey}`;
 		const data = await getData(url);
 		createWeather(data);
