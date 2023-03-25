@@ -1,4 +1,4 @@
-async function getData(url) {
+export async function getData(url) {
 	try {
 		const response = await fetch(url);
 		if(!response.ok) {
@@ -11,7 +11,7 @@ async function getData(url) {
 	}
 }
 
-function getTime(res) {
+export function getTime(res) {
 	let hours = Math.floor(res / (1000 * 60 * 60) % 24);
 	let minutes = Math.floor((res / 1000 / 60) % 60);
 	
@@ -19,7 +19,7 @@ function getTime(res) {
 }
 
 
-function createElem(city17) {
+export function createElem(city17) {
 	const elem = document.createElement("div");
 	const deleteBtn = document.createElement("button");
 	
@@ -35,7 +35,7 @@ function createElem(city17) {
 
 
 
-function createWeather(data) {
+export function createWeather(data) {
 	console.log(data);
 	document.querySelector(".package-name").textContent = data.name;
 	document.querySelector(".price").innerHTML = Math.round(data.main.temp - 273) + "&deg;";
@@ -50,7 +50,7 @@ function createWeather(data) {
 	
 }
 
-async function checkEnter(e) {
+export async function checkEnter(e) {
 	const input = document.querySelector("input");
 	
 	if(e.key === "Enter" && input.value !== "") {
@@ -63,7 +63,7 @@ async function checkEnter(e) {
 	}
 }
 
-function getFromLocalStorage() {
+export function getFromLocalStorage() {
 	if(localStorage.getItem("list")) {
 		const localStorageItems = JSON.parse(localStorage.getItem("list"));
 		
@@ -72,7 +72,7 @@ function getFromLocalStorage() {
 	}
 }
 
-function setToLocalStorage(city17) {
+export function setToLocalStorage(city17) {
 	localStorage.setItem("list", JSON.stringify(city17));
 }
 
@@ -84,6 +84,6 @@ if(deleteBtn) {
 	});
 }
 
-function deleteElem() {
+export function deleteElem() {
 	localStorage.clear();
 }

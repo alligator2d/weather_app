@@ -1,4 +1,13 @@
-require('dotenv').config()
+import {getData, 
+	getTime, 
+	createElem, 
+	createWeather, 
+	checkEnter, 
+	getFromLocalStorage, 
+	setToLocalStorage, 
+	deleteElem} from './view/view.js'
+
+const dotenv = require('../node_modules/dotenv/config.js')
 
 window.addEventListener('DOMContentLoaded',function () {
 	let list = [];
@@ -54,9 +63,6 @@ window.addEventListener('DOMContentLoaded',function () {
 		list.push(input.value);
 		setToLocalStorage(list);
 		input.value = '';
-		
 	})
-	
-	
 })
 
